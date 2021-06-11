@@ -54,3 +54,21 @@ egual.addEventListener("click", (e) => {
         input.value = Math.floor(parseInt(temp) / parseInt(temp2));
     }
 });
+
+document.body.addEventListener("keydown", (e) => {
+    if (op == "+") {
+        input.value = parseInt(temp) + parseInt(temp2);
+    }
+    else if (op == "-") {
+        input.value = parseInt(temp) - parseInt(temp2);
+    }
+    else if (op == "*") {
+        input.value = Math.floor(parseInt(temp) * parseInt(temp2));
+    }
+    else if (op == "/") {
+        input.value = Math.floor(parseInt(temp) / parseInt(temp2));
+    }
+});
+
+
+
