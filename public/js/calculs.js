@@ -6,18 +6,23 @@ let input = document.querySelector("input");
 let temp = "";
 let temp2 = "";
 let op = "";
+let reset =
 
 tabBtnNumber.forEach(element => {
     element.addEventListener("click", () => {
-        if (input.getAttribute("check") == "ok") {
+        if(element.textContent=="C"){
+            document.location.reload();
+            
+        }
+        else if (input.getAttribute("check") == "ok") {
             temp += element.textContent;
-            console.log(temp);
+            
             input.value += element.textContent;
         }
-        else {
+        else if(input.getAttribute("check") == "not ok") {
             temp2 += element.textContent;
             input.value += element.textContent;
-        }
+        } 
     });
 });
 
@@ -32,4 +37,20 @@ tabOperation.forEach(element => {
     })
 });
 
+let egual = document.querySelector(".equal");
+console.log(egual);
 
+egual.addEventListener("click", (e) => {
+    if (op == "+") {
+        input.value = parseInt(temp) + parseInt(temp2);
+    }
+    else if (op == "-") {
+        input.value = parseInt(temp) - parseInt(temp2);
+    }
+    else if (op == "*") {
+        input.value = Math.floor(parseInt(temp) * parseInt(temp2));
+    }
+    else if (op == "/") {
+        input.value = Math.floor(parseInt(temp) / parseInt(temp2));
+    }
+});

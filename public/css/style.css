@@ -26,14 +26,13 @@
 .number{
     width: 70%;
     height: 400px;
-    
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-
 }
+
+
 .operation{
     width: 15%;
     height: 380px;
@@ -60,6 +59,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.numberTaille:hover{
+    background-color: red;
+    bor
 }
 .numberTaille2{
     width: 100%;
