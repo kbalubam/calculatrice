@@ -5,6 +5,7 @@ divP.setAttribute("class", "principale");
 let input= document.createElement("input");
 divP.appendChild(input);
 input.setAttribute("class", "calcul");
+input.setAttribute("check","ok");
 
 let divGlob = document.createElement("div");
 divP.appendChild(divGlob);
